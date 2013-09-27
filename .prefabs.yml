@@ -1,0 +1,20 @@
+---
+'centos-base-oss':
+  description: ''
+  facts:
+    architecture: "x86_64"
+    facterversion: "1.7.3"
+    architecture: x86_64
+    kernel: Linux
+    kernelmajversion: "2.6"
+    kernelrelease: "2.6.32-358.18.1.el6.x86_64"
+    kernelversion: "2.6.32"
+    operatingsystem: CentOS
+    operatingsystemmajrelease: "6"
+    operatingsystemrelease: "6.4"
+    osfamily: RedHat
+    rubyversion: "1.8.7"
+  provider_specifics:
+    vagrant:
+      box: 'centos-base-oss'
+      box_url: 'http://vagrantboxes.derecom.it/boxes/centos-base-oss.box'

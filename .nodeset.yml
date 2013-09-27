@@ -1,0 +1,7 @@
+---
+default_set: 'default'
+sets:
+  'default':
+    nodes:
+      'main':
+        prefab: 'centos-base-oss'
