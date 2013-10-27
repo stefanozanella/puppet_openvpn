@@ -32,4 +32,11 @@ define openvpn::server (
     require   => Class['openvpn::package'],
     before    => Class['openvpn::service'],
   }
+
+  exec { 'selinux port binding':
+    command => "semanage port -a -t openvpn_port_t -p ${proto} ${port}",
+    unless  => "semanage port -l | grep openvpn_port_t | grep ${proto} | grep ${port}",
+    before  => Class['openvpn::service'],
+    path    => [ '/bin', '/usr/sbin' ],
+  }
 }
