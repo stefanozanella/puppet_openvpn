@@ -10,3 +10,6 @@ dh <%= @dh_params %>
 ca <%= @ca %>
 cert <%= @cert %>
 key <%= @key %>
+<% if @client_to_client -%>
+client-to-client
+<% end -%>

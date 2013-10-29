@@ -1,15 +1,16 @@
 # Configures a custom tunnel in server mode.
 
 openvpn::server { 'vpn.example.com':
-  port           => 1195,
-  proto          => 'tcp',
-  dev            => 'tun',
-  server_network => '10.100.0.0',
-  server_netmask => '255.255.0.0',
-  dh_size        => 2048,
-  ca             => '/etc/pki/test_ca.pem',
-  cert           => '/etc/pki/test_cert.pem',
-  key            => '/etc/pki/test_key.pem',
+  port             => 1195,
+  proto            => 'tcp',
+  dev              => 'tun',
+  server_network   => '10.100.0.0',
+  server_netmask   => '255.255.0.0',
+  dh_size          => 2048,
+  ca               => '/etc/pki/test_ca.pem',
+  cert             => '/etc/pki/test_cert.pem',
+  key              => '/etc/pki/test_key.pem',
+  client_to_client => true,
 }
 
 # Auxiliary files
