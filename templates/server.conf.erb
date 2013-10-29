@@ -22,3 +22,9 @@ group <%= @run_group %>
 <% if @compression -%>
 comp-lzo
 <% end -%>
+<% if @persist_key -%>
+persist-key
+<% end %>
+<% if @persist_tun -%>
+persist-tun
+<% end %>

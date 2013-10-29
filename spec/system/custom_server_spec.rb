@@ -33,5 +33,7 @@ describe 'server with custom options' do
     it { should contain "user nobody" }
     it { should contain "group nobody" }
     it { should contain "comp-lzo" }
+    it { should contain "persist-key" }
+    it { should contain "persist-tun" }
   end
 end

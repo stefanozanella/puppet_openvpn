@@ -14,6 +14,8 @@ openvpn::server { 'vpn.example.com':
   run_user         => 'nobody',
   run_group        => 'nobody',
   compression      => true,
+  persist_key      => true,
+  persist_tun      => true,
 }
 
 # Auxiliary files

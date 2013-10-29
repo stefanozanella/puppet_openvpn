@@ -13,6 +13,8 @@ define openvpn::server (
   $run_user = undef,
   $run_group = undef,
   $compression = false,
+  $persist_key = false,
+  $persist_tun = false,
 ) {
 
   include openvpn::package
