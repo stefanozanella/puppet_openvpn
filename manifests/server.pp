@@ -12,6 +12,7 @@ define openvpn::server (
   $client_to_client = false,
   $run_user = undef,
   $run_group = undef,
+  $compression = false,
 ) {
 
   include openvpn::package

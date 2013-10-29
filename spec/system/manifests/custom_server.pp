@@ -13,6 +13,7 @@ openvpn::server { 'vpn.example.com':
   client_to_client => true,
   run_user         => 'nobody',
   run_group        => 'nobody',
+  compression      => true,
 }
 
 # Auxiliary files

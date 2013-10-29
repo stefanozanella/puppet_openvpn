@@ -32,5 +32,6 @@ describe 'server with custom options' do
     it { should contain "client-to-client" }
     it { should contain "user nobody" }
     it { should contain "group nobody" }
+    it { should contain "comp-lzo" }
   end
 end
