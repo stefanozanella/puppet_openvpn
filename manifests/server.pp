@@ -10,6 +10,8 @@ define openvpn::server (
   $cert,
   $key,
   $client_to_client = false,
+  $run_user = undef,
+  $run_group = undef,
 ) {
 
   include openvpn::package

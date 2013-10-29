@@ -30,5 +30,7 @@ describe 'server with custom options' do
     it { should contain("test_cert.pem").after(/^cert/) }
     it { should contain("test_key.pem").after(/^key/) }
     it { should contain "client-to-client" }
+    it { should contain "user nobody" }
+    it { should contain "group nobody" }
   end
 end

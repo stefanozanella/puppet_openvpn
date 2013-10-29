@@ -11,6 +11,8 @@ openvpn::server { 'vpn.example.com':
   cert             => '/etc/pki/test_cert.pem',
   key              => '/etc/pki/test_key.pem',
   client_to_client => true,
+  run_user         => 'nobody',
+  run_group        => 'nobody',
 }
 
 # Auxiliary files
