@@ -20,6 +20,7 @@ openvpn::server { 'vpn.example.com':
   keepalive        => { interval => 10, timeout => 120 },
   status_log       => 'vpn.example.com-status.log',
   pool_persist     => 'vpn.example.com-ipp.txt',
+  ccd              => '/etc/openvpn/vpn.example.com-ccd',
 }
 
 # Auxiliary files
@@ -49,4 +50,10 @@ file { '/etc/pki/test_key.pem':
   group  => 'root',
   mode   => 0440,
   before => Openvpn::Server['vpn.example.com'],
+}
+
+file { '/etc/openvpn/vpn.example.com-ccd':
+  ensure => directory,
+  owner  => 'root',
+  group  => 'root',
 }

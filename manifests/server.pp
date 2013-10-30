@@ -19,6 +19,7 @@ define openvpn::server (
   $keepalive = undef,
   $status_log = undef,
   $pool_persist = undef,
+  $ccd = undef,
 ) {
 
   include openvpn::package
@@ -34,6 +35,10 @@ define openvpn::server (
     require => Class['openvpn::package'],
     before  => Class['openvpn::service'],
     notify  => Class['openvpn::service'],
+  }
+
+  if $ccd {
+    Class['openvpn::package'] -> File[$ccd] -> Class['openvpn::service']
   }
 
   exec { 'diffie-hellman parameters':

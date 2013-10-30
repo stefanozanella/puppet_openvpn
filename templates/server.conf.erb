@@ -24,10 +24,10 @@ comp-lzo
 <% end -%>
 <% if @persist_key -%>
 persist-key
-<% end %>
+<% end -%>
 <% if @persist_tun -%>
 persist-tun
-<% end %>
+<% end -%>
 <% if @verbosity -%>
 verb <%= @verbosity %>
 <% end -%>
@@ -39,4 +39,7 @@ status <%= @status_log %>
 <% end -%>
 <% if @pool_persist -%>
 ifconfig-pool-persist <%= @pool_persist %>
+<% end -%>
+<% if @ccd -%>
+client-config-dir <%= @ccd %>
 <% end -%>

@@ -39,5 +39,6 @@ describe 'server with custom options' do
     it { should contain "keepalive 10 120" }
     it { should contain "status vpn.example.com-status.log" }
     it { should contain "ifconfig-pool-persist vpn.example.com-ipp.txt" }
+    it { should contain "client-config-dir /etc/openvpn/vpn.example.com-ccd" }
   end
 end
