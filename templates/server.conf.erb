@@ -43,3 +43,8 @@ ifconfig-pool-persist <%= @pool_persist %>
 <% if @ccd -%>
 client-config-dir <%= @ccd %>
 <% end -%>
+<% if @routes -%>
+  <% @routes.each do |route| -%>
+push "route <%= route['network'] %> <%= route['netmask'] %>"
+  <% end %>
+<% end %>

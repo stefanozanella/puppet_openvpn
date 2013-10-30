@@ -40,5 +40,7 @@ describe 'server with custom options' do
     it { should contain "status vpn.example.com-status.log" }
     it { should contain "ifconfig-pool-persist vpn.example.com-ipp.txt" }
     it { should contain "client-config-dir /etc/openvpn/vpn.example.com-ccd" }
+    it { should contain %Q{push "route 172.16.1.0 255.255.255.0"} }
+    it { should contain %Q{push "route 10.156.0.0 255.255.0.0"} }
   end
 end

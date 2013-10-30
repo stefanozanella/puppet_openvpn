@@ -21,6 +21,10 @@ openvpn::server { 'vpn.example.com':
   status_log       => 'vpn.example.com-status.log',
   pool_persist     => 'vpn.example.com-ipp.txt',
   ccd              => '/etc/openvpn/vpn.example.com-ccd',
+  routes           => [
+    { network => '172.16.1.0', netmask => '255.255.255.0' },
+    { network => '10.156.0.0', netmask => '255.255.0.0' },
+  ],
 }
 
 # Auxiliary files

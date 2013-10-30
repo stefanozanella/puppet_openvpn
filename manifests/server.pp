@@ -20,6 +20,7 @@ define openvpn::server (
   $status_log = undef,
   $pool_persist = undef,
   $ccd = undef,
+  $routes = undef,
 ) {
 
   include openvpn::package
