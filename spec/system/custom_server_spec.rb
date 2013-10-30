@@ -35,5 +35,6 @@ describe 'server with custom options' do
     it { should contain "comp-lzo" }
     it { should contain "persist-key" }
     it { should contain "persist-tun" }
+    it { should contain "verb 3" }
   end
 end

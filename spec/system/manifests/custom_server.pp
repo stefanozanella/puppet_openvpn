@@ -16,6 +16,7 @@ openvpn::server { 'vpn.example.com':
   compression      => true,
   persist_key      => true,
   persist_tun      => true,
+  verbosity        => 3,
 }
 
 # Auxiliary files
