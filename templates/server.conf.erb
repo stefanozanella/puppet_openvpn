@@ -34,3 +34,6 @@ verb <%= @verbosity %>
 <% if @keepalive -%>
 keepalive <%= @keepalive['interval'] %> <%= @keepalive['timeout'] %>
 <% end -%>
+<% if @status_log -%>
+status <%= @status_log %>
+<% end -%>
