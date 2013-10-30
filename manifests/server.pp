@@ -18,6 +18,7 @@ define openvpn::server (
   $verbosity = undef,
   $keepalive = undef,
   $status_log = undef,
+  $pool_persist = undef,
 ) {
 
   include openvpn::package

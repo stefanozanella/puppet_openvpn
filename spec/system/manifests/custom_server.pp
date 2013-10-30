@@ -19,6 +19,7 @@ openvpn::server { 'vpn.example.com':
   verbosity        => 3,
   keepalive        => { interval => 10, timeout => 120 },
   status_log       => 'vpn.example.com-status.log',
+  pool_persist     => 'vpn.example.com-ipp.txt',
 }
 
 # Auxiliary files

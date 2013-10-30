@@ -37,3 +37,6 @@ keepalive <%= @keepalive['interval'] %> <%= @keepalive['timeout'] %>
 <% if @status_log -%>
 status <%= @status_log %>
 <% end -%>
+<% if @pool_persist -%>
+ifconfig-pool-persist <%= @pool_persist %>
+<% end -%>

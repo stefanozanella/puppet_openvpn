@@ -38,5 +38,6 @@ describe 'server with custom options' do
     it { should contain "verb 3" }
     it { should contain "keepalive 10 120" }
     it { should contain "status vpn.example.com-status.log" }
+    it { should contain "ifconfig-pool-persist vpn.example.com-ipp.txt" }
   end
 end
