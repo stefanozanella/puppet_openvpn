@@ -31,3 +31,6 @@ persist-tun
 <% if @verbosity -%>
 verb <%= @verbosity %>
 <% end -%>
+<% if @keepalive -%>
+keepalive <%= @keepalive['interval'] %> <%= @keepalive['timeout'] %>
+<% end -%>

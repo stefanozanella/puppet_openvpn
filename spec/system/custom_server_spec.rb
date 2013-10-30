@@ -36,5 +36,6 @@ describe 'server with custom options' do
     it { should contain "persist-key" }
     it { should contain "persist-tun" }
     it { should contain "verb 3" }
+    it { should contain "keepalive 10 120" }
   end
 end
