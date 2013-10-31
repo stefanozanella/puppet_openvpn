@@ -46,5 +46,10 @@ client-config-dir <%= @ccd %>
 <% if @routes -%>
   <% @routes.each do |route| -%>
 push "route <%= route['network'] %> <%= route['netmask'] %>"
-  <% end %>
-<% end %>
+  <% end -%>
+<% end -%>
+<% if @push_dns -%>
+  <% @push_dns.each do |dns| -%>
+push "dhcp-option DNS <%= dns %>"
+  <% end -%>
+<% end -%>

@@ -42,5 +42,7 @@ describe 'server with custom options' do
     it { should contain "client-config-dir /etc/openvpn/vpn.example.com-ccd" }
     it { should contain %Q{push "route 172.16.1.0 255.255.255.0"} }
     it { should contain %Q{push "route 10.156.0.0 255.255.0.0"} }
+    it { should contain %Q{push "dhcp-option DNS 172.16.1.200"} }
+    it { should contain %Q{push "dhcp-option DNS 10.156.1.2"} }
   end
 end

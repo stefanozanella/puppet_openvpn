@@ -25,6 +25,7 @@ openvpn::server { 'vpn.example.com':
     { network => '172.16.1.0', netmask => '255.255.255.0' },
     { network => '10.156.0.0', netmask => '255.255.0.0' },
   ],
+  push_dns         => [ '172.16.1.200', '10.156.1.2' ],
 }
 
 # Auxiliary files
